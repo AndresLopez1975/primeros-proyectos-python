@@ -1,0 +1,25 @@
+#Calculo de ecuaciones de segundo grado
+
+print("---Cálculo de raíces de una ecuación de segundo grado---")
+a=int(input("Ingresa el coeficiente a:"))
+b=int(input("Ingresa el coeficiente b:"))
+c=int(input("Ingresa el coeficiente c:"))
+
+def ecuacion(a,b,c):
+    disc=(b*b-4*a*c)
+    if disc<0:
+        imag=-disc
+        x1=(-b+(imag)**0.5)/(2*a)
+        x2=(-b-(imag)**0.5)/(2*a)
+        return x1,x2,"i"
+    
+    else:
+        x1=(-b+(disc)**0.5)/(2*a)
+        x2=(-b-(disc)**0.5)/(2*a)
+        return x1,x2
+
+print (ecuacion(a,b,c))
+
+    
+
+    
